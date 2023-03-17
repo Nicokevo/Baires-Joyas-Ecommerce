@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- FUENTES DE GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <!-- ARCHIVOS CSS PERSONALIZADOS -->
+  <link type="text/css" rel="stylesheet" href="css/estilos.css">
+
+  <title>Baires Joyas</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/1c0520abbf.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+
+
+<body>
+  <!-- SECCION NAVEGACIÓN
+    -->
+  <header class="header">
+    <div class="navbar navbar-dark  shadow-sm">
+      <div class="container">
+
+        <a href=" #" class="navbar-brand d-flex align-items-center">
+          <a type="button" data-toggle="modal" data-target="#cartModal">
+
+            <i class="fas text-white fs-2 fa-shopping-cart verCarrito"></i>
+          </a>
+
+
+        </a>
+
+        <button class="modoOscuro" id="modoOscuro">
+          <span><i class="fas fa-sun"></i></span>
+          <span><i class="fas fa-moon"></i></span></button>
+      </div>
+
+
+
+
+      <div class="contenedorCarrito  ">
+
+        <h4 class="text-white fw-bold">
+          Carrito de compras
+        </h4>
+
+        <a type="button" data-toggle="modal" data-target="#cartModal">
+          <i class="fas text-white fs-2 fa-shopping-cart verCarrito"></i>
+        </a>
+        <ul id="carrito">
+          <table id="lista-productos" class="table  text-white">
+
+            <th class="border-0 ">
+              <tr>
+                <th class="border-0">
+                  Imagen
+                </th>
+                <th class="border-0">
+                  Nombre
+                </th>
+                <th class="border-0">
+                  Precio
+                </th>
+
+
+                <th class="border-0">
+                  Cantidad
+                </th>
+
+                <th>
+
+
+
+                </th>
+              </tr>
+            </th>
+
+
+            <tbody></tbody>
+
+
+          </table>
+
+
+        </ul>
+
+        <div class="container">
+          <div class="row">
+            <div class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate">
+              <div class="icon">
+                <span class="glyphicon glyphicon-ok-sign"></span>
+              </div>
+              <!--/.icon-->
+
+
+              <button type="button" class="redo btn">Comprar</button>
+
+            </div>
+            <!--/.success-->
+          </div>
+          <!--/.row-->
+          <div class="row">
+            <div class="modalbox error col-sm-8 col-md-6 col-lg-5 center animate" style="display: none;">
+              <div class="icon">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+              </div>
+              <!--/.icon-->
+
+
+              <button type="button" class="redo btn">Gracias!</button>
+              <span class="change">-- Baires Joyas --</span>
+            </div>
+            <!--/.success-->
+          </div>
+          <!--/.row-->
+        </div>
+        <!--/.container-->
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <!-- SECCION QUIEN SOY -->
+  <section class=" quien-soy py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 text-center ">
+
+          <img src="img_depilarte/pandora7.PNG" alt=" Soy el desarrolador" id="collares"
+            class="figure-img img-fluid rounded ss  mb-4 mb-md-0 ">
+
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-left align-self-md-center ">
+
+          <h1 class="display-1 titula   text-end"><strong> Baires Joyas</strong>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Ver productos -->
+
+
+  <div class="boton  border-light rounded-pill  ">
+
+    <button id='btnGenera' class="bg-white fw-bold  p-3 text-dark">Ver productos</button>
+  </div>
+
+
+  <!-- TARJETAS AGREGADAS DINAMICAMENTE -->
+  <div id="tarjetas" class="row m-5 border-bottom-0 text-md-center">
+
+  </div>
+  
+  <!-- SECCION PIE DE PÁGINA -->
+  <!-- Tarjetas de presentacion -->
+
+  <main>
+    <div class="options">
+      <div class="option active"
+        style="--optionBackground:url(https://64.media.tumblr.com/bdf9ef9cf2305ea558e15723bb8d0f77/f7470991a66d21d6-1e/s540x810/bb4bededd1559a7573300ef62fd82be0e3f93807.gifv);">
+
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <div class="info">
+            <div class="main">Joyas de Ucrania</div>
+            <div class="sub">Baires Joyas</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="--optionBackground:url(https://64.media.tumblr.com/763e22fb94e389ab0ae56f9790501dec/72655c34ea13a57d-1e/s540x810/59d14a9dde05b4ebb72eb30f03ebd2aeac80407c.gifv);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="info">
+            <div class="main">Collares de Oretemauw</div>
+            <div class="sub">Baires Joyas</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="background-repeat: no-repeat;  --optionBackground:url(https://64.media.tumblr.com/a252676251b10c46dbe3f3dcb45ed759/1f355b96ea219eab-b5/s1280x1920/422c17fbda47069379ac37bd66ce848a2142ac52.jpg);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="info">
+            <div class="main">Plata y oro de Iteresuselle</div>
+            <div class="sub">Baires Joyas</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="background-repeat: no-repeat;  --optionBackground:url(https://64.media.tumblr.com/ea57701f87dafa2db106d71543f21944/624a2e017ec6d91c-28/s1280x1920/350232cbf36c08430ee9bff6ee70ea2b3812bd18.jpg);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="info">
+            <div class="main">Cascada de collares de Idiefe</div>
+            <div class="sub">Baires Joyas</div>
+          </div>
+        </div>
+      </div>
+      <div class="option"
+        style="background-repeat: no-repeat; --optionBackground:url(https://64.media.tumblr.com/ff4383e19c94ca3f68977dc379e6ba17/tumblr_ox24u0ckqO1wuha60o1_1280.png);">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-gem"></i> </div>
+          <div class="info">
+            <div class="main">Artistas usando las cadenas de Inatethi</div>
+            <div class="sub">Baires Joyas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
