@@ -65,15 +65,7 @@ const joya1 = new Joya({
   precio: "$31000",
   imagenes: (URL = "img_depilarte/collarTiffany.PNG"),
 });
-const joya2 = new Joya({
-  id: 1,
-  promo: "4x3!",
-  peso: "10 kilates de oro",
-  nombre: " Collar Jeria",
-  info: "Tamaño Chico ",
-  precio: "$35000",
-  imagenes: (URL = "img_depilarte/collarTiffany2.PNG"),
-});
+
 const joya3 = new Joya({
   id: 2,
   promo: "2x1!",
@@ -92,15 +84,7 @@ const joya4 = new Joya({
   precio: "$70000",
   imagenes: (URL = "img_depilarte/collarTiffany4.PNG"),
 });
-const joya5 = new Joya({
-  id: 3,
-  promo: "3x2!",
-  peso: "3K bañada en Ocre",
-  nombre: "Collar Persa",
-  info: "Tamaño chico ",
-  precio: "$70000",
-  imagenes: (URL = "img_depilarte/fotoRara.jpeg"),
-});
+
 
 let arrayJoyas = [];
 
