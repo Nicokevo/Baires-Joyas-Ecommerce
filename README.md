@@ -1,4 +1,5 @@
-# Shopping Cart Project Baires Joyas
+# Baires-Joyas-Ecommerce
+
 
 This project is a mock shopping cart that uses `localStorage` to store products added to the cart. Included is the ability to activate a dark mode, view promotions, and manage your cart.
 
