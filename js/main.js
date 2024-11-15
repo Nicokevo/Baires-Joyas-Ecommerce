@@ -92,19 +92,11 @@ const joya4 = new Joya({
   precio: "$70000",
   imagenes: (URL = "img_depilarte/collarTiffany4.PNG"),
 });
-const joya5 = new Joya({
-  id: 3,
-  promo: "3x2!",
-  peso: "3K bañada en Ocre",
-  nombre: "Collar Persa",
-  info: "Tamaño chico ",
-  precio: "$70000",
-  imagenes: (URL = "img_depilarte/fotoRara.jpeg"),
-});
+
 
 let arrayJoyas = [];
 
-arrayJoyas.push(joya1, joya2, joya3, joya4,joya5);
+arrayJoyas.push(joya1, joya2, joya3, joya4);
 
 function joyaPorId(id) {
   return arrayJoyas.find((Joya) => Joya.id === id);
